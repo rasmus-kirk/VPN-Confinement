@@ -42,9 +42,9 @@ in pkgs.writeShellApplication {
 
     # Drop packets to unspecified DNS
     ${addNetNSIPRules netnsName [
-      "-N dns-fw"
-      "-A dns-fw -j DROP"
-      "-I OUTPUT -p udp -m udp --dport 53 -j dns-fw"
+      #"-N dns-fw"
+      #"-A dns-fw -j DROP"
+      #"-I OUTPUT -p udp -m udp --dport 53 -j dns-fw"
     ]}
 
     # Set up the wireguard interface
